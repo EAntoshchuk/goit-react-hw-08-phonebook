@@ -1,16 +1,20 @@
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          height: '100px',
+          marginBottom: '20px',
+          backgroundColor: '#acacc8',
+          color: '#017fb8',
+          fontSize: '35px',
+        }}
+      >
+        React Homework-08 Phonebook
+      </div>
     </div>
   );
 };

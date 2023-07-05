@@ -8,7 +8,18 @@ const authSlice = createSlice({
     token: null,
     isLoggedIn: false,
   },
-  extraReducers: {},
+  extraReducers: {
+    [authOperations.register.fullfield](state, action) {
+      state.user = action.payload.user;
+      state.token = action.payload.token;
+      state.isLoggedIn = true;
+    },
+    [authOperations.logIn.fullfield](state, action) {
+      state.user = action.payload.user;
+      state.token = action.payload.token;
+      state.isLoggedIn = true;
+    },
+  },
 });
 
 export default authSlice.reducer;

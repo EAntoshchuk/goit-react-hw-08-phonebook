@@ -8,6 +8,15 @@ const register = createAsyncThunk('auth/register', async credentials => {
     const { data } = await axios.post('/user/singup', credentials);
     return data;
   } catch (error) {
-    return error.message;
+    return alert(error.message);
+  }
+});
+
+const logIn = createAsyncThunk('auth/login', async credentials => {
+  try {
+    const { data } = await axios.post('/user/login', credentials);
+    return data;
+  } catch (error) {
+    return alert(error.message);
   }
 });
